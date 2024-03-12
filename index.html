@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <title>Web locker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="box">
+    <form  class="form" id="dataForm">
+      
+      <h1 class="form-title">Web Locker</h1>
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="platformInput" required>
+        <label for="" class="form-label">Enter Platform Name</label>
+      </div>
+      <div class="form-group">
+        <input type="text" class="form-control" id="usernameInput" required>
+        <label for="" class="form-label">Enter UserName Name</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" class="form-control" id="passwordInput" required>
+        <label for="" class="form-label">Enter Password</label>
+      </div>
+
+    <div class="bottom-box">
+      <button class="form-button" type="submit">Submission</button>
+      <button class="showMyData" type="button"> Fetch my data</button>
+    </div>
+    </form>
+  </div>
+  <!-- edit form -->
+  <div class="modalOne">
+    
+      <form  class="editForm">
+        <span class="closeOne">&times;</span>
+        <h1 class="editTitleForm">Edit Data</h1>
+        <input type="hidden" id="editIndex">
+        
+        <div class="form-group">
+          <input type="text" class="form-control" id="editPlatformInput" required>
+          <label for="" class="form-label">Edit Platform Name</label>
+        </div>
+
+        <div class="form-group">
+          <input type="text" class="form-control" id="editUsernameInput" required>
+          <label for="" class="form-label">Edit User Name</label>
+        </div>
+  
+        <div class="form-group">
+          <input type="text" class="form-control"  id="editPasswordInput" required>
+          <label for="" class="form-label">Edit Password</label>
+        </div>
+  
+      <div class="bottom-box editBottomBox">
+        <button class="form-button" type="submit">Change Data</button>
+      </div>
+      </form>
+  </div>
+<div class="modalTwo">
+    <div id="output">
+      <span class="closeTwo">&times;</span>
+      <h2 class="form-title">Web UnLocked</h2>
+      <table id="dataTable">
+        <thead>
+          <tr>
+            <th>Platform</th>
+            <th>UserName</th>
+            <th>Password</th>
+            <th>Edit</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody id="dataList"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>

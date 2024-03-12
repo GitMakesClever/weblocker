@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  position: relative;
+}
+
+.box{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.form{
+  width: 400px;
+  min-height: 400px;
+  padding: 32px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  position: fixed;
+}
+.form img{
+  display: block;
+  margin:auto;
+}
+
+.form-title{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: small-caps;
+  text-align: center;
+  color: chocolate;
+  
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.editTitleForm{
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-variant: small-caps;
+  text-align: center;
+  color: chocolate;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.form-group{
+  height: 48px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.form-control{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background:none;
+  border:1px solid  #a1a1a1;
+  outline:none;
+  padding: 16px;
+  border-radius: 50px;
+  z-index: 1;
+}
+
+
+.form-label{
+  position: absolute;
+  left: 13px;
+  top: 13px;
+  color: #a1a1a1;
+  background-color: white;
+  padding: 0 6px;
+  font-size: 14px;
+  transition:.3s;
+}
+
+.form-control:focus+ .form-label{
+  top: -10px;
+  z-index: 10;
+  color: chocolate;
+  font-weight: 500;
+}
+.form-control:focus{
+  border: 1px solid chocolate;
+}
+
+.form-control:not(:focus):valid+label{
+  top: -10px;
+  z-index: 10;
+}
+
+.showLabel{
+  font-size: 14px;
+}
+
+.bottom-box{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.editBottomBox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom-box .showMyData{
+  color:chocolate;
+  border: none;
+  background-color: inherit;
+}
+.form-button{
+  display: block;
+  padding: 12px 32px;
+  border: none;
+  background-color: chocolate;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
+  cursor: pointer;
+  transition: .3s;
+}
+.form-button:hover{
+  box-shadow:0 10px 36px rgba(0,0,0,.15);
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.editForm {
+  background-color: #fff;
+  width: 400px;
+  min-height: 420px;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.closeOne , .closeTwo{
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #aaa;
+}
+
+.close:hover {
+  color: black;
+}
+/* output page */
+#output {
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th{
+  background-color: rgba(210, 105, 30, 0.596);
+  
+}
+th:first-child{
+  border-radius: 15px 0px 0px 5px;
+}
+th:last-child{
+  border-radius: 0px 15px 5px 0px;
+}
+th,
+td {
+  padding: 5px 3px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover {
+  background-color: rgba(210, 105, 30, 0.185);
+}
+
+h2{
+  text-align: center;
+}
+
+.modalOne{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modalTwo{
+  display: none;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#output{
+  max-width: 700px;
+  min-height: 700px;
+  background-color: #fff;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+.btnEdit,.btnDelete{
+  display: block;
+  padding: 3px 15px;
+  
+  border: none;
+  background-color: chocolate;
+  color: #fff;
+  border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
+  cursor: pointer;
+  transition: .3s;
+}
+
+button{
+  cursor: pointer;
+}
